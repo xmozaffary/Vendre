@@ -22,11 +22,19 @@ const handleClick = async () => {
 </script>
 <template>
   <span>Vi jobbar på Vendre</span>
-  <Employee
-    v-for="employee in state.employees"
-    :key="employee.id"
-    :employee="employee"
-  ></Employee>
+  <section class="employeeContainer">
+    <Employee
+      v-for="employee in state.employees"
+      :key="employee.id"
+      :employee="employee"
+    ></Employee>
+  </section>
   <button @click="handleClick">visa {{ state.pageText }} sidan</button>
 </template>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.employeeContainer {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+</style>
