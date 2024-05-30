@@ -1,4 +1,3 @@
-import type { IVendreResponse } from "@/models/IVendreResponse";
 import axios from "axios";
 
 export const get = async <T>(url: string): Promise<T> => {

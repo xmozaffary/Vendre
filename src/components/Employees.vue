@@ -7,7 +7,7 @@ import Employee from "./Employee.vue";
 const state = ref<IEmployeeState>({
   employees: [],
   pageNumber: 1,
-  pageText: "andra",
+  buttonText: "andra",
 });
 
 onMounted(async () => {
@@ -16,7 +16,8 @@ onMounted(async () => {
 
 const handleClick = async () => {
   state.value.pageNumber = state.value.pageNumber === 1 ? 2 : 1;
-  state.value.pageText = state.value.pageText === "andra" ? "första" : "andra";
+  state.value.buttonText =
+    state.value.buttonText === "andra" ? "första" : "andra";
   state.value.employees = await getEmployee(state.value.pageNumber);
 };
 </script>
@@ -29,12 +30,11 @@ const handleClick = async () => {
       :employee="employee"
     ></Employee>
   </section>
-  <button @click="handleClick">visa {{ state.pageText }} sidan</button>
+  <button @click="handleClick">visa {{ state.buttonText }} sidan</button>
 </template>
 <style scoped lang="scss">
 .employeeContainer {
   display: grid;
-  flex-direction: row;
   grid-template-columns: 1fr 1fr 1fr;
 }
 </style>
