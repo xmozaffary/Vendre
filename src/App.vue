@@ -3,7 +3,12 @@ import Employees from "./components/Employees.vue";
 </script>
 
 <template>
-  <Employees></Employees>
+  <Employees class="employees"></Employees>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.employees {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+</style>
