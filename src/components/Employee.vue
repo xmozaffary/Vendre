@@ -53,15 +53,15 @@ const state = ref({
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 243px;
+  width: 260px;
   height: 282px;
   padding: 0 16px;
   & > figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 226px;
-    height: 226px;
+    width: 235px;
+    height: 235px;
     border: 2px solid $block-bg-color;
     border-radius: 50%;
     margin: 0;
@@ -73,7 +73,7 @@ const state = ref({
     }
   }
   & > div {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 8px 0 8px 0;
     font-family: sans-serif;
     color: $block-link-color;
   }
