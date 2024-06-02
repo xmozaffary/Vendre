@@ -1,9 +1,12 @@
 {
+  "homepage": "https://xmozaffary.github.io/Vendre/",
   "name": "vendre",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
